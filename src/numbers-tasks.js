@@ -50,7 +50,9 @@ function getCircleCircumference(radius) {
  *  -3, 3  => 0
  */
 function getAverage(value1, value2) {
-  return (BigInt(value1) + BigInt(value2)) / BigInt(2);
+  const divisor = 10 ** 16;
+  const avg = Math.floor(((value1 / divisor + value2 / divisor) / 2) * divisor);
+  return avg;
 }
 
 /**
